@@ -6,7 +6,7 @@ Funcion ordenarLista(lista,n)
 	j <- 0;
 	aux <- 0;
 	
-Mientras j<=n+1 Hacer
+Mientras j<n Hacer
 	i <- 0;
 	
 	Mientras i<n-1 Hacer
