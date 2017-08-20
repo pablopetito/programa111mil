@@ -1,7 +1,11 @@
 
 public class Fecha {
 
-	public static int nuevafecha(int anio, int mes, int dia) {
+	int anio;
+	int mes;
+	int dia;
+	
+	public int nuevafecha(int anio, int mes, int dia) {
 
 		int auxfecha;
 	
@@ -12,14 +16,14 @@ public class Fecha {
 		return auxfecha;
 	}
 
-	public static int get_anio(int f) {
+	public int get_anio(int f) {
 	
 		f = f / 10000;
 		
 		return f;
 	}
 
-	public static int get_mes(int f) {
+	public int get_mes(int f) {
 
 		int auxFecha = 0;
 		
@@ -29,32 +33,21 @@ public class Fecha {
 		return f;
 	}
 	
-	public static int get_dia(int f) {
+	public int get_dia(int f) {
 					
 		f = f-(100*(f/100));
 				
 		return f;
 	}
-	
-	public static void main(String args[]) {
+
+	public String fecha_corta(int f) {
+
+		String f_corta = " ";
 		
-		int anio = 2017;
-		int mes = 8;
-		int dia = 18;
+		f_corta = String.valueOf(get_dia(f)); 
+		f_corta = f_corta + "/" + String.valueOf(get_mes(f));
+		f_corta = f_corta + "/" + String.valueOf(get_anio(f));
 				
-		System.out.print(nuevafecha(anio,mes,dia));
-		
-		System.out.print("---");
-		
-		System.out.print(get_anio(nuevafecha(anio,mes,dia)));
-		
-		System.out.print("---");
-		
-		System.out.print(get_mes(nuevafecha(anio,mes,dia)));
-	
-		System.out.print("---");
-		
-		System.out.print(get_dia(nuevafecha(anio,mes,dia)));
-	
+		return f_corta;
 	}
 }
