@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+
+public class GruposFactory {
+
+	public Grupos armarGrupos() {
+
+		String letraGrupo = null;
+		ArrayList<Equipo> equiposGrupo = new ArrayList<>();
+		ArrayList<Grupo> gruposCompleto = new ArrayList<>();
+
+		for (int i = 0; i < 3; i += 1) {
+
+			switch (i) {
+			case 0: {
+				letraGrupo = "A";
+				break;
+			}
+			case 1: {
+				letraGrupo = "B";
+				break;
+			}
+			case 2: {
+				letraGrupo = "C";
+				break;
+			}
+			default:
+				break;
+			}
+
+			for (Equipos e : Equipos.values()) {
+
+				Equipo equip = new Equipo(e.getGrupo(), e.getPosicion(), e.name(), e.getContinente());
+
+				if (e.getGrupo() == letraGrupo) {
+					equiposGrupo.add(equip);
+				}
+			}
+
+			Grupo crearGrupo = new Grupo(letraGrupo, equiposGrupo.toArray(new Equipo[0]));
+			gruposCompleto.add(crearGrupo);
+			equiposGrupo.clear();
+		}
+
+		return new Grupos(gruposCompleto);
+
+	}
+
+}
