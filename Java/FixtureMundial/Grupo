@@ -1,0 +1,30 @@
+public class Grupo {
+
+	private String letraGrupo;
+	private Equipo[] equipos;
+
+	public Grupo(String grupo, Equipo[] equipos) {
+
+		this.letraGrupo = grupo;
+		this.equipos = equipos;
+
+	}
+
+	String getDenominacion() {
+		return this.letraGrupo;
+	}
+
+	Equipo[] getEquipos() {
+		return equipos;
+	}
+
+	public void mostrarGrupo() {
+
+		for (Equipo e : equipos) {
+			System.out.println(e.getPosEnGrupo() + " - " +  e.getDenominacion());
+		}
+		System.out.println();
+
+	}
+
+}
