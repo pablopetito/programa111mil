@@ -1,0 +1,31 @@
+public class Equipo {
+
+	private String letraGrupo;
+	private int posEnGrupo;
+	private String denominacion;
+	private String continente;
+
+	public Equipo(String letraGrupo, int posEnGrupo, String denominacion, String continente) {
+		this.letraGrupo = letraGrupo;
+		this.posEnGrupo = posEnGrupo;
+		this.denominacion = denominacion;
+		this.continente = continente;
+
+	}
+
+	public String getDenominacion() {
+		return this.denominacion;
+	}
+
+	public String getContinente() {
+		return this.continente;
+	}
+
+	public String getletraGrupo() {
+		return this.letraGrupo;
+	}
+
+	public int getPosEnGrupo() {
+		return this.posEnGrupo;
+	}
+}
