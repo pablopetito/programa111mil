@@ -1,0 +1,37 @@
+public enum Equipos { 
+	ALEMANIA("A", 1, "UEFA"), 
+	ARGENTINA("B", 2, "CONMEBOL"),
+	BRASIL("A", 3, "CONMEBOL"),
+	EEUU("B", 3, "CONCACAF"),
+	FRANCIA("A", 2, "UEFA"),
+	AUSTRALIA("B", 1, "OFC"),
+	NIGERIA("B", 4, "CAF"),
+	IRAN("A", 4, "AFC"),
+	COSTA_RICA("C", 2, "CONCACAF"),
+	INGLATERRA("C", 3, "UEFA"),
+	EGIPTO("C", 1, "CAF"),
+	URUGUAY("C", 4, "CONMEBOL");
+	
+	private final String grupo;
+	private final int posicion;
+	private final String continente;
+
+	private Equipos(String grupo, int posicion, String continente) {
+		this.grupo = grupo;
+		this.posicion = posicion;
+		this.continente = continente;
+	}
+	
+	public String getGrupo() {
+		return grupo;
+	}
+		
+	public int getPosicion() {
+		return posicion;
+	}
+		
+	public String getContinente() {
+		return continente;
+	}
+
+}
