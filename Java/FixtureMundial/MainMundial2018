@@ -1,0 +1,31 @@
+public class MainMundial2018 {
+
+	public static void main(String[] args) {
+
+		verEquiposClasificados();
+
+		GruposFactory armarGrupos = new GruposFactory();
+ 	
+		armarGrupos.armarGrupos().mostrarGrupos();
+				
+	}
+
+	private static void verEquiposClasificados() {
+
+		System.out.printf("\t \t %15s \n", "EQUIPOS CLASIFICADOS");
+		System.out.printf("%-15s \t %-15s \t %1s \t %-3s \n", "Pais", "Confederacion", "Grupo", "Pos");
+		System.out.println("----------------------------------------------------------------");
+
+		for (Equipos e : Equipos.values()) {
+
+			System.out.printf("%-15s \t %-15s \t %1s \t %d \n", e.name(), e.getContinente(), e.getGrupo(),
+					e.getPosicion());
+
+		}
+
+		System.out.println("---------------------------------------------------------------");
+		System.out.println();
+
+	}
+
+}
