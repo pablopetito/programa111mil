@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class GruposFactory {
 
-	public Grupos armarGrupos() {
+	public ArrayList<Grupo> armarGrupos() {
 
 		String letraGrupo = null;
 		ArrayList<Equipo> equiposGrupo = new ArrayList<>();
-		ArrayList<Grupo> gruposCompleto = new ArrayList<>();
+		ArrayList<Grupo> grupos = new ArrayList<>();
 
 		for (int i = 0; i < 3; i += 1) {
 
@@ -35,14 +35,12 @@ public class GruposFactory {
 					equiposGrupo.add(equip);
 				}
 			}
-
 			Grupo crearGrupo = new Grupo(letraGrupo, equiposGrupo.toArray(new Equipo[0]));
-			gruposCompleto.add(crearGrupo);
+			grupos.add(crearGrupo);
 			equiposGrupo.clear();
 		}
 
-		return new Grupos(gruposCompleto);
-
+		return grupos;
 	}
 
 }
