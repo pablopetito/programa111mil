@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+
+public class PantallaTorneo {
+
+	public static void mostrarEquiposClasificados() {
+
+		System.out.printf("\t \t %15s \n", "EQUIPOS CLASIFICADOS");
+		System.out.printf("%-15s \t %-15s \t %1s \t %-3s \n", "Pais", "Confederacion", "Grupo", "Pos");
+		System.out.println("----------------------------------------------------------------");
+
+		for (Equipos e : Equipos.values()) {
+
+			System.out.printf("%-15s \t %-15s \t %1s \t %d \n", e.name(), e.getContinente(), e.getGrupo(),
+					e.getPosicion());
+		}
+		System.out.println("---------------------------------------------------------------");
+		System.out.println();
+	}
+	
+	public static void mostrarGrupo(ArrayList<Grupo> torneo) {
+
+		for (Grupo g : torneo) {
+			
+			System.out.println("Grupo " + g.getDenominacion());
+			
+			System.out.println("------------------------------------------------------------------------------------");
+			System.out.printf("%-3s %-15s \t %-3s \t %3s \t %-3s \t %-3s \t %-3s \t %-3s \t %-3s \t %-3s \n",
+					"Pos", "Equipo", "Pts", "PJ", "PG", "PE", "PP", "GF", "GC", "DG");
+			System.out.println("------------------------------------------------------------------------------------");
+			
+			for (Equipo e : g.getEquipos()) {
+
+				System.out.printf("%-3d %-15s \t %-3d \t %3d \t %-3d \t %-3d \t %-3d \t %-3d \t %-3d \t %-3d \n",
+						e.getPosEnGrupo(), e.getDenominacion(), e.getPuntos(), e.getJugados(), e.getGanados(),
+						e.getEmpatados(), e.getPerdidos(), e.getGolesAFavorPts(), e.getGolesEnContra(), 
+						e.getGolesAFavorPts()-e.getGolesEnContra());
+			}
+			System.out.println("------------------------------------------------------------------------------------");
+			System.out.println();
+		}
+	}
+
+}
