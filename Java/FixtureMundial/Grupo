@@ -10,21 +10,13 @@ public class Grupo {
 
 	}
 
-	String getDenominacion() {
+	public String getDenominacion() {
 		return this.letraGrupo;
 	}
 
-	Equipo[] getEquipos() {
+	public Equipo[] getEquipos() {
 		return equipos;
 	}
 
-	public void mostrarGrupo() {
-
-		for (Equipo e : equipos) {
-			System.out.println(e.getPosEnGrupo() + " - " +  e.getDenominacion());
-		}
-		System.out.println();
-
-	}
-
+	
 }
