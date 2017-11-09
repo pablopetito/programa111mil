@@ -1,12 +1,12 @@
 public class Equipo {
 
-	private String letraGrupo;	 //letra del grupo 
-	private int posEnGrupo;		 //posicion que le asignan inicialmente en el grupo
-	private String denominacion; // nombre 
-	private String continente; 	// denominacion de la confederacion que esta asociada
+	private String letraGrupo; // letra del grupo
+	private int posEnGrupo; // posicion que le asignan inicialmente en el grupo
+	private String denominacion; // nombre
+	private String continente; // denominacion de la confederacion que esta asociada
 	private int pts; // puntos obtenidos
 	private int jug; // partidos jugados
-	private int gan; // partidos ganados 
+	private int gan; // partidos ganados
 	private int per; // partidos perdidos
 	private int emp; // partidos empatados
 	private int gf; // goles a favor
@@ -17,8 +17,8 @@ public class Equipo {
 		this.posEnGrupo = posEnGrupo;
 		this.denominacion = denominacion;
 		this.continente = continente;
-		pts = jug = gan = per = emp = gf = ge = 0; 
-	
+		pts = jug = gan = per = emp = gf = ge = 0;
+
 	}
 
 	public String getDenominacion() {
@@ -36,32 +36,33 @@ public class Equipo {
 	public int getPosEnGrupo() {
 		return posEnGrupo;
 	}
-	
+
 	public int getPuntos() {
 		return pts;
 	}
-	
+
 	public int getJugados() {
 		return jug;
 	}
-	
+
 	public int getGanados() {
 		return gan;
 	}
-	
+
 	public int getPerdidos() {
 		return per;
 	}
-	
+
 	public int getEmpatados() {
 		return emp;
 	}
-	
+
 	public int getGolesAFavorPts() {
 		return gf;
 	}
+
 	public int getGolesEnContra() {
 		return ge;
 	}
-	
+
 }
